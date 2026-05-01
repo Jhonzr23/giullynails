@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Página nail</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+    background: #fff;
+  }
+
+#cabecalho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 260px; /* 🔥 volta ao padrão antigo */
+  z-index: 1;
+  overflow: hidden;
+}
+
+#cabecalho img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTEÚDO */
+#conteudo {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 260px;
+  background: white;
+  padding: 30px 0 60px 0;
+  box-sizing: border-box;
+  z-index: 10;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+}
+
+#gr {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #835421;
+  margin-top: 0;
+  font-family: Calibri, Candara, Segoe, Arial, sans-serif;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 4%;
+  right: 4%;
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 9999;
+}
+
+.whatsapp i {
+  color: white;
+}
+
+/* POPUP */
+.contato {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 530px;
+  max-width: 90%;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  display: none;
+  padding: 20px;
+  text-align: center;
+  z-index: 999;
+}
+
+#logo {
+  width: 100%;
+  height: 350px;
+}
+
+/* MODELOS */
+.modelos {
+  background: #fff;
+  width: 100%;
+  max-width: 900px;
+  margin: 50px auto;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modelos img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info h3 {
+  margin: 0;
+  font-size: 30px;
+  color: #bc8342;
+  letter-spacing: 2px;
+  font-family: Calibri, Candara, Segoe, Arial, sans-serif;
+}
+
+.info h5 {
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+/* ESQUERDA / DIREITA */
+.left { flex-direction: row; }
+.right { flex-direction: row-reverse; }
+
+.right .info {
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* LOADING */
+#loading {
+  display: none;
+  text-align: center;
+  margin: 30px;
+}
+
+/* ⭐ ADIÇÃO ÚNICA (COR DOS PREÇOS) */
+.preco {
+  color: #bc8342;
+  font-weight: 600;
+}
+</style>
+</head>
+
+<body>
+
+<button class="whatsapp" onclick="exibicao()">
+  <i class="fab fa-whatsapp"></i>
+</button>
+
+<div class="contato" id="contato">
+  <strong>Gostou do que viu??</strong>
+  <p>Faça um agendamento no WhatsApp!</p>
+  <p id="txt2"> E assim que possível <br /> abrirei um espaço para você em minha agenda! </p>
+  <img id="logo" src="logo.png" style="margin-bottom: 25px;" />
+  <a href="https://wa.me/5511977703338?text=Olá!%20Gostaria%20de%20fazer%20um%20agendamento!" style="text-decoration: none; font-size: 25px; color: rgb(191, 157, 118);">Clique aqui!</a>
+</div>
+
+<div id="cabecalho">
+  <img src="cabecalho.png" />
+</div>
+
+<div id="conteudo">
+
+  <h1 id="gr">me siga também no instagram!</h1>
+  <a style="text-decoration: none; color:#c01e6f; margin: 47%;" href="https://www.instagram.com/g.r_giullynails?igsh=MWYxYmk4ZHM1cjdu0A==">
+    @g.r_giullynails
+  </a>
+
+  <!-- primeiro conteúdo -->
+  <div class="modelos left">
+    <img src="moldef1.png" />
+    <div class="info">
+      <h3>Molde F1</h3>
+      <h5>
+        Técnica prática e moderna que utiliza moldes pré-curvados para alongar as unhas com precisão e rapidez. Proporciona um acabamento natural, resistente e com formato uniforme, ideal para quem deseja unhas longas e elegantes.<br><br>
+
+        Aplicaçao: <span class="preco">R$ 40</span><br>
+        Manutenção: <span class="preco">R$ 30</span><br>
+        Tempo Médio De Duração: <span class="preco">15 a 20 dias</span>
+      </h5>
+    </div>
+  </div>
+
+</div>
+
+<div id="loading">
+  <p>Carregando mais...</p>
+</div>
+
+<script>
+function exibicao() {
+  const popup = document.getElementById("contato");
+  popup.style.display = popup.style.display === "block" ? "none" : "block";
+}
+
+let carregando = false;
+let contador = 0;
+
+const conteudos = [
+`
+<div class="modelos right">
+  <img src="blindagem.png">
+  <div class="info">
+    <h3>Blindagem</h3>
+    <h5>
+      Técnica que fortalece as unhas naturais com uma camada protetora em gel, evitando quebras e descamações. Proporciona mais resistência e durabilidade do esmalte.<br><br>
+
+      Aplicação Sem Esmalte: <span class="preco">R$ 20</span><br>
+      Aplicação Com Esmalte: <span class="preco">R$ 25</span><br>
+      Tempo Médio De Duração: <span class="preco">15 a 20 dias</span>
+    </h5>
+  </div>
+</div>
+`,
+`
+<div class="modelos left">
+  <img src="banhodegel.png">
+  <div class="info">
+    <h3>Esmaltação Em Gel</h3>
+    <h5>
+      Técnica que garante unhas sempre brilhantes e bem feitas por muito mais tempo. Possui alta durabilidade e acabamento impecável.<br><br>
+
+      Aplicação: <span class="preco">R$ 35</span><br>
+      Tempo Médio De Duração: <span class="preco">15 a 20 dias</span>
+    </h5>
+  </div>
+</div>
+`
+];
+
+function carregarMais() {
+  if (carregando || contador >= conteudos.length) return;
+
+  carregando = true;
+  document.getElementById("loading").style.display = "block";
+
+  setTimeout(() => {
+    const container = document.getElementById("conteudo");
+
+    const bloco = document.createElement("div");
+    bloco.innerHTML = conteudos[contador];
+
+    container.appendChild(bloco);
+
+    contador++;
+
+    carregando = false;
+    document.getElementById("loading").style.display = "none";
+  }, 800);
+}
+
+window.addEventListener("scroll", () => {
+  if (contador >= conteudos.length) return;
+
+  const scrollTop = window.scrollY;
+  const alturaTela = window.innerHeight;
+  const alturaTotal = document.body.offsetHeight;
+
+  if (scrollTop + alturaTela >= alturaTotal - 100) {
+    carregarMais();
+  }
+});
+</script>
+
+</body>
+</html>
